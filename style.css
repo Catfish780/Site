@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.h1 {
+    margin-bottom: 20px;
+}
+
+.center-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.h1 {
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.center-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.center-button:hover {
+    background-color: #0056b3;
+}
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.top-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-button:hover {
+    background-color: #0056b3;
+}
+.reset-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #a71d2a;
+}
+/* Светлая тема (по умолчанию) */
+body {
+    background-color: #ffffff;
+    color: #3e3e41;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #3e3e41;
+    color: #ffffff;
+}
+
+/* Кнопка переключения темы */
+.theme-toggle-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-button:hover {
+    background-color: #0056b3;
+}
+/* Светлая тема (по умолчанию) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark-theme button:hover {
+    background-color: #444444;
+}
+body.dark-theme .h1 {
+    color: #ffffff;
+}
+body {
+    background-image: url('img/5594016.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-attachment: fixed; /* Фиксирует фон при прокрутке страницы */
+}
+body {
+    background-image: url('img/freepik__adjust__10890.jpeg'); /* Укажите путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Светлая тема (по умолчанию) */
+body {
+    background-image: url('img/5594016.jpg'); /* Фон для светлой темы */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s, background-image 0.3s;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-image: url('img/freepik__adjust__10890.jpeg'); /* Фон для тёмной темы */
+    color: #ffffff;
+}

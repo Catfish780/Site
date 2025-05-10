@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapovalov site</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/V__7_-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+  <div class="button-row">
+    <button class="top-button" onclick="window.location.href='https://пасьянс.com/паук/';">Пасьянс Павук</button>
+    <button class="top-button" onclick="window.location.href='https://маджонг.net';">Маджонг</button>
+    <button class="top-button" onclick="window.location.href='https://g.co/kgs/PTg9Je2';">PAC-MAN</button>
+    <button class="top-button" onclick="window.location.href='https://g.co/kgs/2LnBFaL';">Сапер</button>
+    <button class="top-button" onclick="window.location.href='https://g.co/kgs/tPSrp8R';">Змійка</button>
+  </div>
+  <h1 class="h1">Це мій сайт!</h1> 
+  <p>Кнопка була натиснута <span id="counter">0</span> разів.</p>
+  <button class="center-button" onclick="incrementCounter()">Натисни на мене!</button>
+  <button class="reset-button" onclick="resetCounter()">Скинути рахунок</button>
+  <button class="theme-toggle-button" onclick="toggleTheme()">Змінити тему</button>
+
+
+  <script>
+    // Функция для получения текущего значения счётчика из localStorage
+    function getCounter() {
+        const count = localStorage.getItem('buttonClicks') || 0; // Если значение отсутствует, возвращаем 0
+        document.getElementById('counter').innerText = count;
+    }
+
+    // Функция для увеличения счётчика и перехода на YouTube
+    function incrementCounter() {
+        let count = localStorage.getItem('buttonClicks') || 0; // Получаем текущее значение
+        count = parseInt(count) + 1; // Увеличиваем на 1
+        localStorage.setItem('buttonClicks', count); // Сохраняем новое значение в localStorage
+        document.getElementById('counter').innerText = count; // Обновляем счётчик на странице
+
+        // Перенаправляем на YouTube
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    }
+
+    // Функция для сброса счётчика
+    function resetCounter() {
+        localStorage.setItem('buttonClicks', 0); // Устанавливаем значение счётчика в 0
+        document.getElementById('counter').innerText = 0; // Обновляем отображение счётчика
+    }
+
+    // Функция для переключения темы
+    function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle('dark-theme');
+        const isDarkTheme = body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+    }
+    // Устанавливаем тему при загрузке страницы
+    function setInitialTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    }
+
+    // Загружаем текущее значение счётчика и тему при загрузке страницы
+    getCounter();
+    setInitialTheme();
+  </script>
+</body>
+</html>
